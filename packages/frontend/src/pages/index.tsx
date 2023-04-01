@@ -5,6 +5,7 @@ import {
   List,
   ListIcon,
   ListItem,
+  Button,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
 
@@ -44,6 +45,11 @@ const Index = () => (
         </ListItem>
       </List>
     </Main>
+    <a href='/home'>
+      <Button>
+        To Home
+      </Button>
+    </a>
 
     <DarkModeSwitch />
     <Footer>
