@@ -10,6 +10,7 @@
     "start": "yarn env-cmd yarn workspaces foreach -pi run start"
   },
   "dependencies": {
+    "chakra-ui-file-picker": "0.1.0",
     "react-icons": "^4.8.0"
   },
   "devDependencies": {
