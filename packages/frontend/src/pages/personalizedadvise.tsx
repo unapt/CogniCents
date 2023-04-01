@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from '../styles/inputpage.module.css'
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { SideBar } from "../components/SideBar";
+import API from "../components/API";
+
 
 const PersonalizedAdvise = () => (
     <>
@@ -12,6 +14,14 @@ const PersonalizedAdvise = () => (
             </Heading>
             <Divider />
             <br />
+            <div className="App">
+            <header className="App-header" style={{ width: "100%" }}>
+                <h1 style={{ fontSize: 70, marginTop: "2rem" }}>
+                <b>CogniVest</b>
+                </h1>
+                <API />
+            </header>
+            </div>
             <div className={styles.body}>
                 <div className={styles.welcomeBox}>
                     <div className={styles.welcomeMessage}>Access your customized assistants:</div>
