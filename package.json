@@ -8,5 +8,11 @@
     "dev": "yarn env-cmd yarn workspaces foreach -pi run dev",
     "build": "yarn env-cmd yarn workspaces foreach -pi run build",
     "start": "yarn env-cmd yarn workspaces foreach -pi run start"
+  },
+  "dependencies": {
+    "react-icons": "^4.8.0"
+  },
+  "devDependencies": {
+    "prettier": "2.8.7"
   }
 }
