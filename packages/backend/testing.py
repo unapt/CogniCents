@@ -1,5 +1,6 @@
-from transformers import AutoTokenizer, AutoModelForTokenClassification
+from transformers import AutoTokenizer, AutoModelForTokenClassification, AutoTokenizer, AutoModelForDocumentQuestionAnswering
 from transformers import pipeline
+import os
 
 
 
@@ -26,4 +27,19 @@ def summerize(data):
 
     return summarizer(data)
 
-print(summerize(" Flan-PaLM 540B achieves state-of-the-art performance on several benchmarks, such as 75.2% on five-shot MMLU. We also publicly release Flan-T5 checkpoints,1 which achieve strong few-shot performance even compared to much larger models, such as PaLM 62B. Overall, instruction finetuning is a general method for improving the performance and usability of pretrained language models"))
+
+
+def docuquery():
+    nlp = pipeline(
+        "document-question-answering",
+        model="impira/layoutlm-document-qa",
+    )
+
+    return nlp(
+            "https://templates.invoicehome.com/invoice-template-us-neat-750px.png",
+            "What is the invoice number?"
+            )
+
+
+
+print(docuquery())
