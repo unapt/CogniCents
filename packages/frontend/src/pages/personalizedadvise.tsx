@@ -6,12 +6,13 @@ const PersonalizedAdvise = () => (
     <>
         <SideBar>
             <Heading margin={5}>
-                CogniCents Artificial Intelligence
+                CogniVest AI
+            </Heading>
+            <Heading color="gray.500" margin={5}>
+                Your Personalized AI Investing Assistant
             </Heading>
             <Divider />
             <br />
-
-
         </SideBar>
     </>
 );
