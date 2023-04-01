@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from transformers import pipeline
 from pydantic import BaseModel
 import requests
+import os
 
 app = FastAPI()
 
@@ -25,6 +26,8 @@ async def summerize(data: Data):
         "summarization", model="philschmid/bart-large-cnn-samsum")
     
     return summarizer(data.message)
+
+
 
 
 
