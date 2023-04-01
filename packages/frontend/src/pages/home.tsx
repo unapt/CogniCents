@@ -15,7 +15,7 @@ const Home = () => (
                     <Card maxW='sm'>
                         <CardBody>
                             <Stack mt='1' spacing='3'>
-                                <Heading size='md'><Center>Literacy Tools</Center></Heading>
+                                <Heading size='md'><Center>Financial Literacy</Center></Heading>
                                 <Text>
                                     Understand the complexities of finance without actually having to Understand
                                     the complexities of finance. Use these tools to gain the confidence you need
@@ -35,7 +35,7 @@ const Home = () => (
                     <Card maxW='sm'>
                         <CardBody>
                             <Stack mt='1' spacing='3'>
-                                <Heading size='md'><Center>Assistive Tools</Center></Heading>
+                                <Heading size='md'><Center>Automation Tools</Center></Heading>
                                 <Text>
                                     Automate your financial processes with our assistive automation tools.
                                     expense tracking, and spending analysis features. Quickly identify
@@ -56,7 +56,7 @@ const Home = () => (
                 <Card maxW='full'>
                     <CardBody>
                         <Stack mt='1' spacing='3'>
-                            <Heading size='md'><Center>CogniVest AI</Center></Heading>
+                            <Heading size='md'><Center>Get Personalized AI Assistance</Center></Heading>
                             <Text>
                                 Get customized financial and investment guidance based on your unique financial situation, goals,
                                 and preferences. Our machine learning algorithms analyze your financial data and real-time market trends to
