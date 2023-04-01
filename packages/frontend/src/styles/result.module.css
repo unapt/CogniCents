@@ -1,0 +1,21 @@
+#resultbody {
+    margin: auto;
+    text-align: center;
+}
+
+#piecharts {
+    margin: auto;
+    margin-top: 50px;
+}
+
+#resulttitle {
+    font-size: 35px;
+    margin-top: 30px;
+    font-weight: 500px;
+}
+
+#carouseltitle {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
