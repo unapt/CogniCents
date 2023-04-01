@@ -4,6 +4,10 @@ import requests
 
 app = FastAPI()
 
+
+class Data(BaseModel):
+    message: str
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
