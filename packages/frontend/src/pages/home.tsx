@@ -17,7 +17,7 @@ const Home = () => (
                             <Stack mt='1' spacing='3'>
                                 <Heading size='md'><Center>Literacy Tools</Center></Heading>
                                 <Text>
-                                    Understand the complexities of finance without actually haveing to Understand
+                                    Understand the complexities of finance without actually having to Understand
                                     the complexities of finance. Use these tools to gain the confidence you need
                                     to make informed financial decisions.
                                 </Text>
@@ -39,7 +39,7 @@ const Home = () => (
                                 <Text>
                                     Automate your financial processes with our assistive automation tools.
                                     expense tracking, and spending analysis features. Quickly identify
-                                    potential opportunities to avoid unnecessary time lost doing your financials.
+                                    potential opportunities to avoid unnecessary time lost doing your finances.
                                 </Text>
                             </Stack>
                         </CardBody>
@@ -56,11 +56,11 @@ const Home = () => (
                 <Card maxW='full'>
                     <CardBody>
                         <Stack mt='1' spacing='3'>
-                            <Heading size='md'><Center>Personalized Advise</Center></Heading>
+                            <Heading size='md'><Center>CogniVest AI</Center></Heading>
                             <Text>
-                                Get customized financial guidance based on your unique financial situation, goals,
-                                and preferences. Our machine learning algorithms analyze your financial data to
-                                provide personalized recommendations on how to improve your financial well-being.
+                                Get customized financial and investment guidance based on your unique financial situation, goals,
+                                and preferences. Our machine learning algorithms analyze your financial data and real-time market trends to
+                                provide personalized recommendations on how to invest and improve your financial well-being.
                             </Text>
                         </Stack>
                     </CardBody>
