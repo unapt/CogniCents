@@ -53,7 +53,7 @@ const Index = () => (
 
     <DarkModeSwitch />
     <Footer>
-      <Text>❤️</Text>
+      <Text>Crafted with ❤️ by Joe White, Daniel Unhuryan, Brett Seaton, Melvin He</Text>
     </Footer>
     <CTA />
   </Container>
