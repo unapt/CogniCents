@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+    width: 70%;
+  }
+
+  .container {
+    width: 50%;
+    padding : 20px;
+    text-align: center;
+  }

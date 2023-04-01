@@ -1,0 +1,44 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 350px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.welcomeMessage {
+    font-size: 30px;
+    color: rgb(101, 147, 1);
+    text-align: center;
+    margin: 20px;
+    font-weight: 500;
+    
+}
+
+.prompt {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: rgb(89, 90, 117);
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    height: 650px;
+}
+
+.welcomeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 4px lightgray;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+    border-radius: 8px;
+}

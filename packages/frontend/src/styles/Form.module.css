@@ -1,0 +1,71 @@
+#main {
+    width: 60%;
+    margin: auto;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid rgb(40, 128, 0);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  #mainHeader {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: rgb(40, 128, 0);
+  }
+  
+  .formlabel {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+    color: rgb(40, 128, 0);
+  }
+  
+  .income {
+    margin-bottom: 40px;
+  }
+  
+  #forminput {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid rgb(40, 128, 0);
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  #forminput::placeholder {
+    font-size: 16px;
+  }
+  
+  #buttonlayout {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #submitbutton {
+    background-color: rgb(40, 128, 0);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    box-shadow: 2px 2px 2px rgb(224, 224, 224);
+    transition: opacity 0.15s;
+  }
+  
+  #submitbutton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
