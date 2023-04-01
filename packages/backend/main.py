@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from transformers import pipeline
+from pydantic import BaseModel
 import requests
 
 app = FastAPI()
@@ -14,15 +15,16 @@ async def root():
 
 #LITERACY FUNCTIONS
 
-@app.get("/summerize")
+@app.post("/summerize")
 async def summerize(data: Data):
     """
     returns a summerization of message that is provided
     """
+    print(data.message)
+    summarizer = pipeline(
+        "summarization", model="philschmid/bart-large-cnn-samsum")
     
-    summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-
-    return summarizer(data.message, max_length=200, min_length=50, do_sample=False)
+    return summarizer(data.message)
 
 
 
