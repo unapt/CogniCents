@@ -14,4 +14,16 @@ def token_classifier():
     ner_results = nlp(example)
     return ner_results
 
-print(token_classifier())
+
+
+def summerize(data):
+    """
+    returns a summerization of message that is provided
+    """
+    
+    summarizer = pipeline(
+        "summarization", model="philschmid/bart-large-cnn-samsum")
+
+    return summarizer(data)
+
+print(summerize(" Flan-PaLM 540B achieves state-of-the-art performance on several benchmarks, such as 75.2% on five-shot MMLU. We also publicly release Flan-T5 checkpoints,1 which achieve strong few-shot performance even compared to much larger models, such as PaLM 62B. Overall, instruction finetuning is a general method for improving the performance and usability of pretrained language models"))
