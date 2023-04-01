@@ -16,17 +16,17 @@ const PersonalizedAdvise = () => (
                 <div className={styles.welcomeBox}>
                     <div className={styles.welcomeMessage}>Access your customized assistants:</div>
                     <div className={styles.buttons}>
-                    <Link href='/test'>
-                        <Button variant='solid' width="full" height="20" colorScheme='green'>
-                            CogniVest AI
-                        </Button>
-                    </Link >
-                    <br />
-                    <Link href='/form'>
-                        <Button variant='solid' width="full" height="20" colorScheme='yellow'>
-                            CogniCents AI
-                        </Button>
-                    </Link >
+                        <Link href='/test'>
+                            <Button variant='solid' width="full" height="20" colorScheme='green'>
+                                CogniVest AI
+                            </Button>
+                        </Link >
+                        <br />
+                        <Link href='/form'>
+                            <Button variant='solid' width="full" height="20" colorScheme='yellow'>
+                                CogniCents AI
+                            </Button>
+                        </Link >
                     </div>
                 </div>
             </div>
