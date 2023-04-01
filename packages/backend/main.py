@@ -6,7 +6,6 @@ import json
 
 app = FastAPI()
 
-
 class Data(BaseModel):
     message: str
 
@@ -59,4 +58,40 @@ response = requests.post(api_endpoint, headers=headers, data=json.dumps(payload)
 
 # Print the response from the API
 print(response.text)
+
+# If the transfer was successful, update the account balances
+if response.status_code == 201:
+    # Get the account information for the payer account
+    payer_endpoint = f'http://api.nessieisreal.com/accounts/{payer_id}?key={access_token}'
+    payer_response = requests.get(payer_endpoint)
+    payer_account = payer_response.json()
+
+    # Subtract the transfer amount from the payer's balance
+    payer_balance = payer_account['balance']
+    payer_balance -= transfer_amount
+
+    # Update the payer's balance on the Capital One API
+    payer_update_payload = {
+        'balance': payer_balance
+    }
+    payer_update_response = requests.put(payer_endpoint, headers=headers, data=json.dumps(payer_update_payload))
+    print(f'Payer balance updated to: ${payer_balance:.2f}')
+
+    # Get the account information for the payee account
+    payee_endpoint = f'http://api.nessieisreal.com/accounts/{payee_id}?key={access_token}'
+    payee_response = requests.get(payee_endpoint)
+    payee_account = payee_response.json()
+
+    # Add the transfer amount to the payee's balance
+    payee_balance = payee_account['balance']
+    payee_balance += transfer_amount
+
+    # Update the payee's balance on the Capital One API
+    payee_update_payload = {
+        'balance': payee_balance
+    }
+    payee_update_response = requests.put(payee_endpoint, headers=headers, data=json.dumps(payee_update_payload))
+    print(f'Payee balance updated to: ${payee_balance:.2f}')
+else:
+    print(f'Transfer failed with error code: {response.status_code}')
 
