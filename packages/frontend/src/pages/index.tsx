@@ -38,7 +38,7 @@ const Index = () => (
         color: 'white',
       }}>
 
-  >    Exploor Freedom
+      Exploor Freedom
     </Button>
     <Image src={result} alt="coinstack art" width="600" height="800" />
 
