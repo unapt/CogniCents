@@ -26,6 +26,7 @@ yarn-error.log*
 .pnpm-debug.log*
 yarn-1.22.19.cjs\
 .yarnrc
+yarn-1.22.19.cjs
 
 # local env files
 .env*.local
@@ -37,3 +38,4 @@ settings.json
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
