@@ -64,7 +64,7 @@ const Literacy = () => {
         <>
             <SideBar>
                 <Heading margin={5} onLoad={event => findDailyTenQs()}>
-                    Finincial Literacy Intelligence
+                    Financial Literacy Intelligence
                 </Heading>
                 <Divider />
                 <br />
