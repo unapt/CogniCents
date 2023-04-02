@@ -85,7 +85,7 @@ const Home = () => (
                     </CardBody>
                     <Divider />
                     <CardFooter>
-                        <Link href='/personalizedadvise' width="full">
+                        <Link href='/capone' width="full">
                             <Button variant='solid' width="full" colorScheme='red'>
                                 Donate
                             </Button>

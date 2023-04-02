@@ -36,6 +36,7 @@ const LinkItems: Array<LinkItemProps> = [
     { name: 'Literacy', icon: FiBookOpen, link: '/literacy' },
     { name: 'Assistive Automation', icon: FiTarget, link: '/assistive' },
     { name: 'Personalized Advise', icon: FiLifeBuoy, link: '/personalizedadvise' },
+    { name: 'Capital One Payments', icon: FiActivity, link: '/capone'},
 ];
 
 export function SideBar({ children }: { children: ReactNode }) {
