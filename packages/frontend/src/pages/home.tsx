@@ -68,13 +68,31 @@ const Home = () => (
                     <CardFooter>
                         <Link href='/personalizedadvise' width="full">
                             <Button variant='solid' width="full" colorScheme='blue'>
-                                Explores
+                                Explore
+                            </Button>
+                        </Link >
+                    </CardFooter>
+                </Card>
+                <Card maxW='full'>
+                    <Image src='/CapOne.svg.png' alt='Capital One Logo' maxW='100px' mx='auto' mt='4' />
+                    <CardBody>
+                        <Stack mt='1' spacing='3'>
+                            <Heading size='md'><Center>Donate to CogniCents AI via Capital One Secure Transfer</Center></Heading>
+                            <Text>
+                            Thank you for choosing CogniCents Financial Services. We appreciate you using our application to assist you with financial advising concerns and needs. If you are enjoying our product, we encourage you to support the team with an optional contribution.
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <Link href='/personalizedadvise' width="full">
+                            <Button variant='solid' width="full" colorScheme='red'>
+                                Donate
                             </Button>
                         </Link >
                     </CardFooter>
                 </Card>
             </VStack>
-
         </Container>
     </>
 );
