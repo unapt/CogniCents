@@ -1,71 +1,58 @@
-// import {
-//     Box,
-//     Divider,
-//     Heading,
-//     VStack,
-//     Button,
-//     useColorModeValue,
-//   } from "@chakra-ui/react";
-//   import Link from "next/link";
-//   import { SideBar } from "../components/SideBar";
-//   import API from "../components/API";
-  
-//   const PersonalizedAdvise = () => {
-//     const bg = useColorModeValue("gray.50", "gray.800");
-//     const color = useColorModeValue("gray.700", "gray.200");
-  
-//     return (
-//       <>
-//         <SideBar>
-//           <Box as="main" textAlign="center" py={10} bg={bg} color={color}>
-//             <Heading as="h1" size="2xl" mb={10}>
-//               Customize Your Personal Finances with AI
-//             </Heading>
-//             <Divider mb={5} />
-//             <VStack spacing={4} maxWidth="400px" margin="0 auto">
-//               <Heading as="h2" size="xl" mb={5}>
-//                 CogniVest
-//               </Heading>
-//               <API />
-//             </VStack>
-//           </Box>
-//         </SideBar>
-//       </>
-//     );
-//   };
-  
-//   export default PersonalizedAdvise;
-import {
-    Box,
-    Divider,
-    Heading,
-    VStack,
-    Button,
-    useColorModeValue,
-  } from "@chakra-ui/react";
-  import Link from "next/link";
-  import { SideBar } from "../components/SideBar";
-  import API from "../components/API";
-  
-  const PersonalizedAdvise = () => {
-    const bg = useColorModeValue("gray.50", "gray.800");
-    const color = useColorModeValue("gray.700", "gray.200");
-  
-    return (
-      <>
+import { Box, Card, CardBody, Divider, Heading, HStack, Stack, Text, Textarea, CardFooter, ButtonGroup, Button, Center, VStack } from "@chakra-ui/react";
+import Link from "next/link";
+import styles from '../styles/inputpage.module.css'
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { SideBar } from "../components/SideBar";
+import API from "../components/API";
+import sentiments from '../../public/sentiments.png';
+import Image from 'next/image';
+
+
+
+const PersonalizedAdvise = () => (
+    <>
         <SideBar>
-          <Box as="main" py={10} px={5} bg={bg} color={color}>
-            <Heading as="h1" size="2xl" mb={10}>
-              Customize Your Personal Finances with AI
+            <Heading margin={5}>
+                CogniVest in Real-Time with AI
             </Heading>
-            <Divider mb={5} />
-            <VStack spacing={4} maxWidth="400px">
-              <API />
-            </VStack>
-          </Box>
+            <Divider />
+            <Text margin={5} style={{ fontSize: 24, marginTop: "2rem", marginLeft: "7rem"}}>
+                CogniVest helps investors stay up-to-date on the latest financial news and trends.
+            </Text>
+            <Text margin={5}>
+                Data visuals - Provides easy-to-understand graphical representations of market 
+                trends, allowing users to quickly identify patterns and make informed investment 
+                decisions.
+            </Text>
+            <Text margin={5}>
+                Real-time finance articles from Fidelity API - Keeps users up-to-date 
+                with the latest news and events from a reliable source, providing valuable 
+                insights into market trends and potential investment opportunities.
+            </Text>
+            <Text margin={5}>
+                News Sentiment Analysis scoring - Analyzes market sentiment and provides users with 
+                a score that helps them assess market trends and adjust their investment strategies 
+                accordingly. This feature is powered by AI and NLP technology, allowing users to access 
+                sophisticated analysis tools that can help them make more informed decisions.
+            </Text>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Image src={sentiments} alt="sentiments" width={500} height={500} />
+            </div>
+            <Divider />
+            {/*<Text color="gray.500" margin={5}>
+                CogniVest is a web application that uses AI to help you make better financial decisions. We use your financial data to provide you with personalized financial advice. We also provide you with a personalized financial dashboard that helps you keep track of your finances.
+            </Text>*/}
+            <div className="App">
+                {/* <Heading className="App-header" style={{ width: "100%" }}> */}
+                {/*<h1 style={{ fontSize: 70, marginTop: "2rem" }}>
+                    <b>CogniVest</b>
+                </h1>*/}
+                <API />
+                {/* </Heading> */}
+            </div>
+
         </SideBar>
-      </>
-    );
-  };
-  
-  export default PersonalizedAdvise;
+    </>
+);
+
+export default PersonalizedAdvise;
