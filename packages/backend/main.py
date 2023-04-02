@@ -86,40 +86,28 @@ def getSummary(filing):
     return totalSummary
 
 
-@app.get("/getAllSummarys")
-def getAllSummarys():
-    one = getSummary(allFiles[0])
-    two = getSummary(allFiles[1])
-    three = getSummary(allFiles[2])
-    four = getSummary(allFiles[3])
-    five = getSummary(allFiles[4])
+@app.post("/getSummary")
+def getAllSummarys(fileLoc):
+    one = getSummary(str(fileLoc))
+    # titleone = getArticleTitle(one)
+    # compone = determineCompany(one)
 
-    titleone = getArticleTitle(one)
-    titletwo = getArticleTitle(two)
-    titlethree = getArticleTitle(three)
-    titlefour = getArticleTitle(four)
-    titlefive = getArticleTitle(five)
-
-    compone = determineCompany(one)
-    comptwo = determineCompany(two)
-    compthree = determineCompany(three)
-    compfour = determineCompany(four)
-    compfive = determineCompany(five)
-
-    summary_dict = {"summary": [one, two, three, four, five],
-                    "teaser": [titleone, titletwo, titlethree, titlefour, titlefive],
-                    "company": [compone, comptwo, compthree, compfour, compfive]}
-    summary_json = json.dumps(summary_dict)
-    return summary_json
+    # summary_dict = {"summary": {one},
+    #                "teaser": {titleone},
+    #                "company": {compone}
+    #                }
+    # summary_json = json.dumps(summary_dict)
+    return one
 
 
-def getArticleTitle(message: Data):
-    gpt_prompt = f"""Your job is to title this article that 
+@app.post("/getArticleTitle")
+def getArticleTitle(message):
+    gpt_prompt = f"""Your job is to provide a 4 scentence long teaser about this article that 
     is provided to you.
     """
-    info = message
-    if (len(message) > (4*4090)):
-        info = (message[:(4*4090)])
+    info = str(message).strip
+    if (len(message) > (3*3500)):
+        info = (message[:(3*3500)])
 
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
@@ -131,7 +119,8 @@ def getArticleTitle(message: Data):
     return (str(completion['choices'][0]['message']['content']))
 
 
-def determineCompany(context: Data):
+@app.post("/determineCompany")
+def determineCompany(context):
     question_answerer = pipeline(
         "question-answering", model='distilbert-base-cased-distilled-squad')
 

@@ -70,9 +70,9 @@ allFiles = [txt, txt1, txt2, txt3, txt4]
 def getSummary(filing):
     totalSummary = ""
     filing = str(filing)
-    while (len(str(filing)) > (3*4000)):
-        info = (filing[:(3*4000)]) if len(filing) > 75 else filing
-        filing = filing[(4000*3):]
+    while (len(str(filing)) > (4*4000)):
+        info = (filing[:(4*4000)]) if len(filing) > 75 else filing
+        filing = filing[(4000*4):]
         totalSummary = totalSummary + summarizePart(info)
 
     if (len(filing) > 0):
@@ -83,7 +83,7 @@ def getSummary(filing):
 
 def getAllSummarys(fileLoc):
     one = getSummary(str(fileLoc))
-    titleone = getArticleTitle(one)
+    # titleone = getArticleTitle(one)
     # compone = determineCompany(one)
 
     # summary_dict = {"summary": {one},
@@ -91,7 +91,7 @@ def getAllSummarys(fileLoc):
     #                "company": {compone}
     #                }
     # summary_json = json.dumps(summary_dict)
-    return titleone
+    return one
 
 
 def getArticleTitle(message):
@@ -119,4 +119,4 @@ def determineCompany(context):
     return (question_answerer(question="What company is this paragraph refering to?", context=context))
 
 
-print(tenq(txt4))
+print(getAllSummarys(tenq(txt1)))
