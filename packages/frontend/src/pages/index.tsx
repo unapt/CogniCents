@@ -44,9 +44,6 @@ const Index = () => (
     <Image src={result} alt="coinstack art" width="600" height="800" />
 
 
-
-
-
   </Container>
 );
 
