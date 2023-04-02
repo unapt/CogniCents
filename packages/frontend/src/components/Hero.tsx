@@ -49,7 +49,7 @@ const titleGradient = css`
 
 export const Hero = ({ title }: { title: string }) => (
   <Flex justifyContent="center" alignItems="center" height="75vh">
-    <Heading fontSize="6vw" css={titleGradient}>
+    <Heading fontSize="10vw" css={titleGradient}>
       {title}
     </Heading>
   </Flex>

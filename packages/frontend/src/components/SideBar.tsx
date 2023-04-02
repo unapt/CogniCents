@@ -19,11 +19,13 @@ import {
 import {
     FiHome,
     FiMenu,
+    FiBookOpen,
     FiActivity,
     FiTarget,
-    FiBookOpen,
-    FiLifeBuoy,
     FiDollarSign,
+    FiLock,
+    FiGlobe,
+    FiCompass,
 } from 'react-icons/fi';
 import { RiStockFill } from 'react-icons/ri'
 import { IconType } from 'react-icons';
@@ -38,10 +40,10 @@ const LinkItems: Array<LinkItemProps> = [
     { name: 'Home', icon: FiHome, link: '/' },
     { name: 'Literacy', icon: FiBookOpen, link: '/literacy' },
     { name: 'Equity Research', icon: FiActivity, link: '/cogniVest' },
-    { name: 'Personalized Budgeting', icon: FiTarget, link: '/budgeting' },
-    //{ name: 'Financial Resources', icon: FiDollarSign, link: '/resources' },
-    //{ name: 'Crypto Resources', icon: FiLifeBuoy, link: '/cogniCrypt' },
-
+    { name: 'Personalized Budgeting', icon: FiTarget, link: '/form' },
+    { name: 'Decentralized Finances', icon: FiLock, link: '/cogniCrypto' },
+    { name: 'Extra Financial Resources', icon: FiDollarSign, link: '/resources' },
+    //{ name: 'Cogni Cause', icon: FiGlobe, link: '/cogniCause' },
 ];
 
 export function SideBar({ children }: { children: ReactNode }) {

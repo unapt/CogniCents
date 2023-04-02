@@ -119,7 +119,7 @@ import {
 } from "@chakra-ui/react";
 import { SideBar } from "../../components/SideBar";
 
-export default function Form() {
+export default function Budgeting() {
   const router = useRouter();
 
   const handleSubmit = async (event) => {
@@ -151,15 +151,18 @@ export default function Form() {
           </Heading>
           <form onSubmit={handleSubmit}>
             <VStack spacing={4} maxWidth="400px" margin="0 auto">
+            <FormControl isRequired>
+                <FormLabel>Monthly savings:</FormLabel>
+                <Input
+                  name="savingsExpenses"
+                  type="number"
+                  placeholder="$ Your monthly savings"
+                  backgroundColor='#EDEDED'
+                />
+              </FormControl>
+
               <FormControl isRequired>
                 <FormLabel>Monthly housing expenses:</FormLabel>
-                {/*<NumberInput step={5} defaultValue={15} min={10} max={10000}>
-                  <NumberInputField />
-                  <NumberInputStepper>
-                    <NumberIncrementStepper />
-                    <NumberDecrementStepper />
-                  </NumberInputStepper>
-                </NumberInput>*/}
                 <Input
                   name="housingExpenses"
                   type="number"
@@ -184,16 +187,6 @@ export default function Form() {
                   name="entertainmentExpenses"
                   type="number"
                   placeholder="$ Your monthly entertainment expenses"
-                  backgroundColor='#EDEDED'
-                />
-              </FormControl>
-
-              <FormControl isRequired>
-                <FormLabel>Monthly savings:</FormLabel>
-                <Input
-                  name="savingsExpenses"
-                  type="number"
-                  placeholder="$ Your monthly savings"
                   backgroundColor='#EDEDED'
                 />
               </FormControl>

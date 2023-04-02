@@ -28,8 +28,8 @@ const Index = () => (
     <Hero />
     <Button
       size='md'
-      height='48px'
-      width='200px'
+      height='60px'
+      width='230px'
       border='2px'
       borderColor='green.500'
       as="a" href="/literacy"
@@ -37,8 +37,7 @@ const Index = () => (
         bg: '#66D489',
         color: 'white',
       }}>
-
-      Explore Freedom
+      Explore Financial Freedom
     </Button>
     <DarkModeSwitch />
     <Image src={result} alt="coinstack art" width="600" height="800" />

@@ -58,7 +58,15 @@ function piechart() {
         <PieChart chartData={userData} info='Your Expense' />
         <PieChart chartData={standardData} info='Your Optimal Budget' />
       </div>
-      <div id={styles.carouseltitle}>How you'll get there: INVEST, INVEST, INVEST in...<a href="https://www.verbwire.com/" target="_blank" rel="noopener noreferrer">Verbwire!</a></div>
+      <div>
+        <div id={styles.carouseltitle}>Here's are some tips to help you save more:</div>
+        <div>1. Track spending: Monitor expenses regularly to know where your money is going.</div>
+        <div>2. Create a budget: Make a realistic budget that includes all expenses.</div>
+        <div>3. Prioritize savings: Set aside a portion of income each month for emergency funds, retirement, and other long-term goals.</div>
+        <div>4. Cut unnecessary expenses: Look for ways to cut back on non-essential expenses.</div>
+        <div>5. Review budget regularly: Check regularly to ensure spending aligns with financial goals and adjust if necessary.</div>
+      </div>
+      {/*<div id={styles.carouseltitle}>How you'll get there: INVEST, INVEST, INVEST in...<a href="https://www.verbwire.com/" target="_blank" rel="noopener noreferrer">Verbwire!</a></div>*/}
       <Link href='/home'>
           <Button variant='solid' width="half" height="half" colorScheme='green'>
               Back to Home
