@@ -100,12 +100,6 @@ const Literacy = () => {
                                 <SkeletonLoader loading={articlesLoading} />
                                 <SkeletonLoader loading={articlesLoading} />
                                 <SkeletonLoader loading={articlesLoading} />
-                                {txt = 'https://www.sec.gov/Archives/edgar/data/1866633/000186663323000017/0001866633-23-000017-index.htm'
-                                txt1 = 'https://www.sec.gov/Archives/edgar/data/1819516/000181951623000022/0001819516-23-000022-index.htm'
-                                txt2 = 'https://www.sec.gov/Archives/edgar/data/1836875/000183687523000064/0001836875-23-000064-index.htm'
-                                txt3 = 'https://www.sec.gov/Archives/edgar/data/1275187/000162828023010093/0001628280-23-010093-index.htm'
-                                txt4 = 'https://www.sec.gov/Archives/edgar/data/894556/000168316823002036/0001683168-23-002036-index.htm'
-    }
 
                                 {data?.data.map((item, i) => (
                                     <TenqCard
