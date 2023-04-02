@@ -31,7 +31,7 @@ const lineChartOptions = {
       title: {
         display: true,
         text: '30 Day Pricing',
-      },
+      }
     }
 };
 

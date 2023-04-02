@@ -23,6 +23,7 @@ import {
     FiBookOpen,
     FiLifeBuoy
 } from 'react-icons/fi';
+import { RiStockFill } from 'react-icons/ri'
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 
@@ -35,7 +36,8 @@ const LinkItems: Array<LinkItemProps> = [
     { name: 'Home', icon: FiHome, link: '/' },
     { name: 'Literacy', icon: FiBookOpen, link: '/literacy' },
     { name: 'Assistive Automation', icon: FiTarget, link: '/assistive' },
-    { name: 'Personalized Advise', icon: FiLifeBuoy, link: '/personalizedadvise' },
+    { name: 'Equity Research', icon: RiStockFill, link: '/personalizedadvise' },
+    { name: 'Personalized Analysis', icon: FiLifeBuoy, link: '/form' },
 ];
 
 export function SideBar({ children }: { children: ReactNode }) {

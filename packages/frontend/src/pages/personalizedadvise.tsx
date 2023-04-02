@@ -15,31 +15,14 @@ const PersonalizedAdvise = () => (
             <Divider />
             <br />
             <div className="App">
-            <header className="App-header" style={{ width: "100%" }}>
+                {/* <Heading className="App-header" style={{ width: "100%" }}> */}
                 <h1 style={{ fontSize: 70, marginTop: "2rem" }}>
-                <b>CogniVest</b>
+                    <b>CogniVest</b>
                 </h1>
                 <API />
-            </header>
+                {/* </Heading> */}
             </div>
-            <div className={styles.body}>
-                <div className={styles.welcomeBox}>
-                    <div className={styles.welcomeMessage}>Access your customized assistants:</div>
-                    <div className={styles.buttons}>
-                        <Link href='/test'>
-                            <Button variant='solid' width="full" height="20" colorScheme='green'>
-                                CogniVest AI
-                            </Button>
-                        </Link >
-                        <br />
-                        <Link href='/form'>
-                            <Button variant='solid' width="full" height="20" colorScheme='yellow'>
-                                CogniCents AI
-                            </Button>
-                        </Link >
-                    </div>
-                </div>
-            </div>
+
         </SideBar>
     </>
 );

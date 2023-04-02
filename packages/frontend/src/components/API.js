@@ -1,11 +1,10 @@
 import axios from "axios";
 import { React, useState } from "react";
-
+import { Card, CardBody, Divider, Heading, HStack, Stack, Image, Text, Textarea, CardFooter, ButtonGroup, Button, Center, VStack } from "@chakra-ui/react";
 import LineChart from "./LineChart";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -234,6 +233,7 @@ export default function API() {
                 )}
               </Col>
               <Col>
+                <Card borderRadius="lg">
                 {lineChartData ? (
                   <LineChart
                     lineChartData={lineChartData[ticker["identifier"]]}
@@ -241,7 +241,10 @@ export default function API() {
                 ) : (
                   <></>
                 )}
+                </Card>
+                
               </Col>
+            <hr />
             </Row>
           ))}
         </>
