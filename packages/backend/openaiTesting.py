@@ -45,7 +45,8 @@ def summarizePart(partFiling):
     You need to dumb it down and make it easy for the average person to 
     understand. Please indicate the most importand information for investment
     related concepts. Please summerize this in 3 paragraphs made up of at least
-    three sentences per paragraph.
+    three sentences per paragraph. In addition to this, start the article by
+    stating what company you are refering to in the title. 
     """
 
     completion = openai.ChatCompletion.create(
@@ -119,4 +120,4 @@ def determineCompany(context):
     return (question_answerer(question="What company is this paragraph refering to?", context=context))
 
 
-print(getAllSummarys(tenq(txt1)))
+print(getAllSummarys(tenq(txt2)))

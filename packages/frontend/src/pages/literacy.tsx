@@ -1,4 +1,4 @@
-import { Card, CardBody, Tabs, Textarea, Text, TabList, TabPanels, Tab, TabPanel, Divider, Heading, HStack, Stack, Image, CardFooter, ButtonGroup, Button, Center, VStack, SimpleGrid, Skeleton, Box } from "@chakra-ui/react";
+import { Card, CardBody, Tabs, Textarea, Text, TabList, TabPanels, Tab, TabPanel, Divider, Heading, HStack, Stack, Image, CardFooter, ButtonGroup, Button, Center, VStack, SimpleGrid, Skeleton, Box, Spacer } from "@chakra-ui/react";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { SideBar } from "../components/SideBar";
 import { useState } from "react";
@@ -15,29 +15,36 @@ const Literacy = () => {
     const [text, setText] = useState("")
     const [data, setData] = useState()
     const [articlesLoading, setArticlesLoading] = useState(false)
-    const articles = () = [
-        'https://www.sec.gov/Archives/edgar/data/1866633/000186663323000017/0001866633-23-000017-index.htm',
-        'https://www.sec.gov/Archives/edgar/data/1819516/000181951623000022/0001819516-23-000022-index.htm',
-        'https://www.sec.gov/Archives/edgar/data/1836875/000183687523000064/0001836875-23-000064-index.htm',
-        'https://www.sec.gov/Archives/edgar/data/1275187/000162828023010093/0001628280-23-010093-index.htm',
-        'https://www.sec.gov/Archives/edgar/data/894556/000168316823002036/0001683168-23-002036-index.htm'
+    const articles = [
+        "https://www.sec.gov/Archives/edgar/data/1866633/000186663323000017/0001866633-23-000017-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1819516/000181951623000022/0001819516-23-000022-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1836875/000183687523000064/0001836875-23-000064-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1275187/000162828023010093/0001628280-23-010093-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/894556/000168316823002036/0001683168-23-002036-index.htm"
     ]
+
+    const articleIs = 'https://www.sec.gov/Archives/edgar/data/1836875/000183687523000064/0001836875-23-000064-index.htm'
+    const artTitl = 'General Enterprise Ventures, Inc'
+
+    const [summary, setsummary] = useState("")
     function findDailyTenQs() {
 
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: text })
+            body: JSON.stringify({ message: articleIs })
         };
 
-        setArticlesLoading(true)
+        setsummary("")
+
+        setArticlesLoading(false)
         fetch("api/getSummary", requestOptions)
             .then((res) => res.json())
-            .then((data) => setAnswer(data[0].articles))
+            .then((data) => setsummary(data))
             .catch((err) => {
                 alert(err)
             })
-            .finally(() => setArticlesLoading(false))
+            .finally(() => setArticlesLoading(true))
 
     }
 
@@ -69,9 +76,10 @@ const Literacy = () => {
     return (
         <>
             <SideBar>
-                <Heading margin={5} onLoad={event => findDailyTenQs()}>
+                <Heading margin={5}>
                     Financial Literacy Intelligence
                 </Heading>
+
                 <Divider />
                 <br />
                 <p>DESCRIPTION PARAGRAPH HERE</p>
@@ -79,7 +87,19 @@ const Literacy = () => {
                 <Tabs size='md' variant='enclosed'>
                     <TabList>
                         <Tab>Summerize</Tab>
-                        <Tab>Two</Tab>
+                        <Tab>Stay Informed</Tab>
+                        <Spacer></Spacer>
+                        <Button
+                            variant="outline"
+                            colorScheme="blue"
+                            mr={3} _hover={{
+                                bg: '#66D489',
+                                color: 'white',
+                            }}
+                            onClick={findDailyTenQs}
+                        >
+                            Generate Todays Article
+                        </Button>
                     </TabList>
                     <TabPanels>
                         <TabPanel>
@@ -94,24 +114,33 @@ const Literacy = () => {
                         </TabPanel>
                         <TabPanel>
                             <SimpleGrid columns={2} spacing={10}>
-                                <SkeletonLoader loading={articlesLoading} />
-                                <SkeletonLoader loading={articlesLoading} />
-                                <SkeletonLoader loading={articlesLoading} />
-                                <SkeletonLoader loading={articlesLoading} />
-                                <SkeletonLoader loading={articlesLoading} />
-                                <SkeletonLoader loading={articlesLoading} />
+                                {/* {articles.map((item, i) => ( */}
+                                <SkeletonLoader loading={articlesLoading} >
+                                    <Card
+                                        direction={{ base: 'column', sm: 'row' }}
+                                        overflow='hidden'
+                                        variant='outline'
+                                        _hover={{
+                                            bg: '#66D489',
+                                            color: 'white',
+                                        }}
+                                    >
 
-                                {data?.data.map((item, i) => (
-                                    <TenqCard
-                                        key={i}
-                                        title="hell0"
-                                        intro="sooogoood"
-                                        link="hello" />
+                                        <Stack>
+                                            <CardBody>
+                                                <Heading size='md'>{artTitl}</Heading>
+                                                {summary ? <>
+
+                                                    <Text py='2'>
+                                                        {summary}
+                                                    </Text></> : null}
+                                            </CardBody>
+
+                                        </Stack>
+                                    </Card>
+                                </SkeletonLoader>
 
 
-
-                                ))
-                                }
                             </SimpleGrid>
 
                         </TabPanel>

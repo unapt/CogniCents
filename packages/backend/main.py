@@ -23,6 +23,13 @@ class Data(BaseModel):
     message: str
 
 
+def tenq(url_10q):
+
+    section_text = extractorApi.get_section(url_10q, "part2item1a", "text")
+
+    return section_text
+
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
@@ -58,46 +65,24 @@ def summarizePart(partFiling):
     return (str(completion['choices'][0]['message']['content']))
 
 
-txt = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileFive.txt').read_text()
-txt1 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileFour.txt').read_text()
-txt2 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileThree.txt').read_text()
-txt3 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileTwo.txt').read_text()
-txt4 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileOne.txt').read_text()
-
-allFiles = [txt, txt1, txt2, txt3, txt4]
-
-
 def getSummary(filing):
     totalSummary = ""
-    for file in allFiles:
-        while (len(filing) > (4*4090)):
-            info = (filing[:(4*4090)]) if len(filing) > 75 else filing
-            filing = filing[(4090*4):]
-            totalSummary = totalSummary + summarizePart(info)
+    filing = str(filing)
+    while (len(str(filing)) > (4*4000)):
+        info = (filing[:(4*4000)]) if len(filing) > 75 else filing
+        filing = filing[(4000*4):]
+        totalSummary = totalSummary + summarizePart(info)
 
-        if (len(filing) > 0):
-            totalSummary = totalSummary + summarizePart(filing)
+    if (len(filing) > 0):
+        totalSummary = totalSummary + summarizePart(filing)
 
     return totalSummary
 
 
 @app.post("/getSummary")
-def getAllSummarys(fileLoc):
-    one = getSummary(str(fileLoc))
-    # titleone = getArticleTitle(one)
-    # compone = determineCompany(one)
+def getAllSummarys(fileLoc: Data):
 
-    # summary_dict = {"summary": {one},
-    #                "teaser": {titleone},
-    #                "company": {compone}
-    #                }
-    # summary_json = json.dumps(summary_dict)
-    return one
+    return getSummary(str(tenq(fileLoc.message)))
 
 
 @app.post("/getArticleTitle")
