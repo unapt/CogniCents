@@ -1,6 +1,4 @@
-# Vanadium Hackathon Template
-
-This is straight boiler-plate using:
+# CogniCents
 
 Frontend: NextJS, Typescript, Chakra UI
 
