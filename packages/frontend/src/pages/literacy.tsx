@@ -1,7 +1,8 @@
-import { Card, CardBody, Tabs, Textarea, Text, TabList, TabPanels, Tab, TabPanel, Divider, Heading, HStack, Stack, Image, CardFooter, ButtonGroup, Button, Center, VStack } from "@chakra-ui/react";
+import { Card, CardBody, Tabs, Textarea, Text, TabList, TabPanels, Tab, TabPanel, Divider, Heading, HStack, Stack, Image, CardFooter, ButtonGroup, Button, Center, VStack, SimpleGrid, Skeleton, Box } from "@chakra-ui/react";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { SideBar } from "../components/SideBar";
 import { useState } from "react";
+import { TenqCard } from "../components/TenQCard";
 
 
 
@@ -12,6 +13,27 @@ const Literacy = () => {
     // code for calling backend
     const [loading, setLoading] = useState(false)
     const [text, setText] = useState("")
+    const [data, setData] = useState()
+    const [articlesLoading, setArticlesLoading] = useState(false)
+
+    function findDailyTenQs() {
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text })
+        };
+
+        setArticlesLoading(true)
+        fetch("api/getArticles", requestOptions)
+            .then((res) => res.json())
+            .then((data) => setAnswer(data[0].articles))
+            .catch((err) => {
+                alert(err)
+            })
+            .finally(() => setArticlesLoading(false))
+
+    }
 
     const [answer, setAnswer] = useState("")
 
@@ -61,7 +83,42 @@ const Literacy = () => {
                                 <Text>{answer}</Text></> : null}
                         </TabPanel>
                         <TabPanel>
-                            <p>two!</p>
+                            <SimpleGrid columns={2} spacing={10}>
+                                <Stack padding={4} spacing={1}>
+                                    <Skeleton height='40px' isLoaded={articlesLoading}>
+                                        <Box>Hello World!</Box>
+                                    </Skeleton>
+                                    <Skeleton
+                                        height='40px'
+                                        isLoaded={articlesLoading}
+                                        bg='green.500'
+                                        color='white'
+                                        fadeDuration={1}
+                                    >
+                                        <Box>Hello React!</Box>
+                                    </Skeleton>
+                                    <Skeleton
+                                        height='40px'
+                                        isLoaded={articlesLoading}
+                                        fadeDuration={4}
+                                        bg='blue.500'
+                                        color='white'
+                                    >
+                                        <Box>Hello ChakraUI!</Box>
+                                    </Skeleton>
+                                </Stack>
+                                {data?.data.map((item, i) => (
+                                    <TenqCard
+                                        key={i}
+                                        title="hell0"
+                                        intro="sooogoood"
+                                        link="hello" />
+
+
+                                ))
+                                }
+                            </SimpleGrid>
+
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
