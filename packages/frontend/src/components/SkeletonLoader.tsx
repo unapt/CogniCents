@@ -1,6 +1,7 @@
 import { Flex, Heading, Skeleton, Stack } from "@chakra-ui/react";
+import React, { ReactNode } from 'react';
 
-export const SkeletonLoader = ({ loading = false }: { loading: boolean }) => (
+export const SkeletonLoader = ({ loading = false, children }: { loading: boolean, children: ReactNode }) => (
     <Stack padding={4} spacing={1}>
         <Skeleton height='40px' isLoaded={loading}>
         </Skeleton>
@@ -11,6 +12,7 @@ export const SkeletonLoader = ({ loading = false }: { loading: boolean }) => (
             color='white'
             fadeDuration={1}
         >
+            {children}
         </Skeleton>
         <Skeleton
             height='40px'
