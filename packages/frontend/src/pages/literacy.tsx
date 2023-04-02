@@ -82,11 +82,12 @@ const Literacy = () => {
 
                 <Divider />
                 <br />
-                <p>DESCRIPTION PARAGRAPH HERE</p>
+                <p> Stay up-to-date with your financial literacy using Hugging Face's 
+                    deep learning models through the Open AI API.</p>
                 <br />
                 <Tabs size='md' variant='enclosed'>
                     <TabList>
-                        <Tab>Summerize</Tab>
+                        <Tab>Summarize</Tab>
                         <Tab>Stay Informed</Tab>
                         <Spacer></Spacer>
                         <Button
