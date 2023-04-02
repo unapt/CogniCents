@@ -6,7 +6,7 @@ const Assistive = () => (
     <>
         <SideBar>
             <Heading margin={5}>
-                Finincial Literacy Intelligence
+                Financial Literacy Intelligence
             </Heading>
             <Divider />
             <br />
