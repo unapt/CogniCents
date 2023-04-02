@@ -1,13 +1,7 @@
 import { Box, Card, CardBody, Divider, Heading, HStack, Stack, Text, Textarea, CardFooter, ButtonGroup, Button, Center, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import styles from '../styles/inputpage.module.css'
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { SideBar } from "../components/SideBar";
-import API from "../components/API";
-import blockchain from '../../public/blockchain.jpg';
-import web3 from '../../public/web3.jpg';
-
-import Image from 'next/image';
 
 const PersonalizedAdvise = () => (
   <>

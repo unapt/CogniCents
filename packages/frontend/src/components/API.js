@@ -32,7 +32,7 @@ export default function API() {
   const [stockInfo, setStockInfo] = useState(null);
   const [lineChartData, setLineChartData] = useState(null);
   const [newsObj, setNewsObj] = useState({});
-  const [stockInputText, setStockInputText] = useState("MSFT,GOOGL,COF");
+  const [stockInputText, setStockInputText] = useState("MSFT,GOOGL,TSLA");
   const updateStockFromInput = (event) => setStockInputText(event.target.value);
 
   const updateStock = async (e) => {

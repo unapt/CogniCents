@@ -24,10 +24,11 @@ const PersonalizedAdvise = () => (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Image src={web3} alt="web3" width={1000} height={1000} />
             </div>
+            {/*
             <Text margin={5} style={{ fontSize: 24, marginTop: "2rem", marginLeft: "25rem"}}>
                 What is Web3?
             </Text>
-            {/*<Text margin={5}>
+            <Text margin={5}>
             Web3 refers to the next generation of the internet being built on blockchain technology.
 
             Web3 is envisioned as a more secure, transparent, and decentralized internet, where 

@@ -40,9 +40,9 @@ const LinkItems: Array<LinkItemProps> = [
     { name: 'Home', icon: FiHome, link: '/' },
     { name: 'Literacy', icon: FiBookOpen, link: '/literacy' },
     { name: 'Equity Research', icon: FiActivity, link: '/cogniVest' },
-    { name: 'Personalized Budgeting', icon: FiTarget, link: '/budgeting' },
+    { name: 'Personalized Budgeting', icon: FiTarget, link: '/form' },
     { name: 'Decentralized Finances', icon: FiLock, link: '/cogniCrypto' },
-    { name: 'Financial Resources', icon: FiDollarSign, link: '/resources' },
+    { name: 'Extra Financial Resources', icon: FiDollarSign, link: '/resources' },
     //{ name: 'Cogni Cause', icon: FiGlobe, link: '/cogniCause' },
 ];
 
