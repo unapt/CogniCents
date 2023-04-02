@@ -30,7 +30,7 @@ const lineChartOptions = {
       },
       title: {
         display: true,
-        text: '30 Day Pricing',
+        text: '30 Day Stock Pricing',
       }
     }
 };
@@ -50,7 +50,7 @@ const lineChartDataDefault = {
 
 export default function LineChart({lineChartData}) {
     return (
-        <div style={{height:"50vh",position:"relative", marginBottom:"1%", padding:"1%"}}>
+        <div style={{height:"40vh",position:"relative", marginBottom:"1%", padding:"1%"}}>
             <Line
                 options={lineChartOptions}
                 data={lineChartData ? lineChartData : lineChartDataDefault}

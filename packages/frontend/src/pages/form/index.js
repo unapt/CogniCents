@@ -109,6 +109,11 @@ import {
   FormControl,
   FormLabel,
   Input,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
   VStack,
   Heading,
 } from "@chakra-ui/react";
@@ -148,6 +153,13 @@ export default function Form() {
             <VStack spacing={4} maxWidth="400px" margin="0 auto">
               <FormControl isRequired>
                 <FormLabel>Monthly housing expenses:</FormLabel>
+                {/*<NumberInput step={5} defaultValue={15} min={10} max={10000}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>*/}
                 <Input
                   name="housingExpenses"
                   type="number"

@@ -1,6 +1,24 @@
 import axios from "axios";
 import { React, useState } from "react";
-import { Card, CardBody, Divider, Heading, HStack, Stack, Image, Text, Textarea, CardFooter, ButtonGroup, Button, Center, VStack } from "@chakra-ui/react";
+import {
+  Card,
+  Input,
+  IconButton,
+  SearchIcon,
+  CardBody,
+  Divider,
+  Heading,
+  HStack,
+  Stack,
+  Image,
+  Text,
+  Textarea,
+  CardFooter,
+  ButtonGroup,
+  Button,
+  Center,
+  VStack,
+} from "@chakra-ui/react";
 import LineChart from "./LineChart";
 
 import Row from "react-bootstrap/Row";
@@ -107,7 +125,7 @@ export default function API() {
             var pricingData = {};
             for (let i = 0; i < currentStockInfo["timestamps"].length; i++) {
               pricingData[lineChartLabels[i]] =
-                currentStockInfo[categories[cat]["name"]][i]; // closing data
+                currentStockInfo[categories[cat]["name"]][i];
             }
 
             var netGain =
@@ -194,14 +212,18 @@ export default function API() {
 
   return (
     <div style={{ width: "100%" }}>
-      <form onSubmit={updateStock}>
-        <h1>Enter Stock Tinker Symbol:</h1>
-        <input
+      <form
+        onSubmit={updateStock}
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <text style={{ fontSize: '24px' }}>Enter Stock Symbols:</text>
+        <Input
           type="text"
           value={stockInputText}
           onChange={updateStockFromInput}
+          style={{ marginRight: "20px", marginLeft: "20px"}}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" style={{ marginRight: "10px"}}>Submit</Button>
       </form>
 
       {stockInfo ? (
@@ -220,10 +242,10 @@ export default function API() {
                   <>
                     <br />
                     <br />
-                    Real-Time Sentiment Analysis News Score:{" "}
+                    Real-Time News Sentiment Analysis Score:{" "}
                     {newsObj[ticker["identifier"]]["newsScore"]}
                     {newsObj[ticker["identifier"]][0]["headline"]
-                      .slice(0, 3)
+                      .slice(0, 7)
                       .map((newsArticle) => (
                         <p key={newsArticle["resId"]}>{newsArticle["text"]}</p>
                       ))}
@@ -234,17 +256,16 @@ export default function API() {
               </Col>
               <Col>
                 <Card borderRadius="lg">
-                {lineChartData ? (
-                  <LineChart
-                    lineChartData={lineChartData[ticker["identifier"]]}
-                  />
-                ) : (
-                  <></>
-                )}
+                  {lineChartData ? (
+                    <LineChart
+                      lineChartData={lineChartData[ticker["identifier"]]}
+                    />
+                  ) : (
+                    <></>
+                  )}
                 </Card>
-                
               </Col>
-            <hr />
+              <hr />
             </Row>
           ))}
         </>
