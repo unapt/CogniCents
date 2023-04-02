@@ -58,6 +58,7 @@ const Literacy = () => {
             .finally(() => setLoading(false))
     }
 
+    let len = 6;
 
     return (
         <>
@@ -84,6 +85,7 @@ const Literacy = () => {
                         </TabPanel>
                         <TabPanel>
                             <SimpleGrid columns={2} spacing={10}>
+
                                 <Stack padding={4} spacing={1}>
                                     <Skeleton height='40px' isLoaded={articlesLoading}>
                                         <Box>Hello World!</Box>
