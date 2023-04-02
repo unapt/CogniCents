@@ -40,6 +40,7 @@ const Index = () => (
 
       Exploor Freedom
     </Button>
+    <DarkModeSwitch />
     <Image src={result} alt="coinstack art" width="600" height="800" />
 
 
