@@ -18,7 +18,9 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "openai": "^3.2.0",
+    "sec-api": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
