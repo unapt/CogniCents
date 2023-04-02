@@ -3,7 +3,7 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { SideBar } from "../components/SideBar";
 import { useState } from "react";
 import { TenqCard } from "../components/TenQCard";
-
+import { SkeletonLoader } from "../components/SkeletonLoader";
 
 
 
@@ -25,7 +25,7 @@ const Literacy = () => {
         };
 
         setArticlesLoading(true)
-        fetch("api/getArticles", requestOptions)
+        fetch("api/getSummary", requestOptions)
             .then((res) => res.json())
             .then((data) => setAnswer(data[0].articles))
             .catch((err) => {
@@ -63,7 +63,7 @@ const Literacy = () => {
     return (
         <>
             <SideBar>
-                <Heading margin={5}>
+                <Heading margin={5} onLoad={event => findDailyTenQs()}>
                     Finincial Literacy Intelligence
                 </Heading>
                 <Divider />
@@ -85,30 +85,14 @@ const Literacy = () => {
                         </TabPanel>
                         <TabPanel>
                             <SimpleGrid columns={2} spacing={10}>
+                                <SkeletonLoader loading={articlesLoading} />
+                                <SkeletonLoader loading={articlesLoading} />
+                                <SkeletonLoader loading={articlesLoading} />
+                                <SkeletonLoader loading={articlesLoading} />
+                                <SkeletonLoader loading={articlesLoading} />
+                                <SkeletonLoader loading={articlesLoading} />
 
-                                <Stack padding={4} spacing={1}>
-                                    <Skeleton height='40px' isLoaded={articlesLoading}>
-                                        <Box>Hello World!</Box>
-                                    </Skeleton>
-                                    <Skeleton
-                                        height='40px'
-                                        isLoaded={articlesLoading}
-                                        bg='green.500'
-                                        color='white'
-                                        fadeDuration={1}
-                                    >
-                                        <Box>Hello React!</Box>
-                                    </Skeleton>
-                                    <Skeleton
-                                        height='40px'
-                                        isLoaded={articlesLoading}
-                                        fadeDuration={4}
-                                        bg='blue.500'
-                                        color='white'
-                                    >
-                                        <Box>Hello ChakraUI!</Box>
-                                    </Skeleton>
-                                </Stack>
+
                                 {data?.data.map((item, i) => (
                                     <TenqCard
                                         key={i}
