@@ -24,6 +24,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+yarn-1.22.19.cjs\
+.yarnrc
 
 # local env files
 .env*.local
