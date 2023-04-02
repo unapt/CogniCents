@@ -59,14 +59,10 @@ def summarizePart(partFiling):
 
 
 txt = 'https://www.sec.gov/Archives/edgar/data/1866633/000186663323000017/0001866633-23-000017-index.htm'
-txt1 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileFour.txt')
-txt2 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileThree.txt')
-txt3 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileTwo.txt')
-txt4 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileOne.txt')
+txt1 = 'https://www.sec.gov/Archives/edgar/data/1819516/000181951623000022/0001819516-23-000022-index.htm'
+txt2 = 'https://www.sec.gov/Archives/edgar/data/1836875/000183687523000064/0001836875-23-000064-index.htm'
+txt3 = 'https://www.sec.gov/Archives/edgar/data/1275187/000162828023010093/0001628280-23-010093-index.htm'
+txt4 = 'https://www.sec.gov/Archives/edgar/data/894556/000168316823002036/0001683168-23-002036-index.htm'
 
 allFiles = [txt, txt1, txt2, txt3, txt4]
 
@@ -88,14 +84,14 @@ def getSummary(filing):
 def getAllSummarys(fileLoc):
     one = getSummary(str(fileLoc))
     titleone = getArticleTitle(one)
-    compone = determineCompany(one)
+    # compone = determineCompany(one)
 
-    summary_dict = {"summary": {one},
-                    "teaser": {titleone},
-                    "company": {compone}
-                    }
-    summary_json = json.dumps(summary_dict)
-    return summary_json
+    # summary_dict = {"summary": {one},
+    #                "teaser": {titleone},
+    #                "company": {compone}
+    #                }
+    # summary_json = json.dumps(summary_dict)
+    return titleone
 
 
 def getArticleTitle(message):
@@ -123,4 +119,4 @@ def determineCompany(context):
     return (question_answerer(question="What company is this paragraph refering to?", context=context))
 
 
-print(getAllSummarys(tenq(txt)))
+print(tenq(txt4))
