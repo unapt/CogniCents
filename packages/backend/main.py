@@ -10,11 +10,13 @@ app = FastAPI()
 class Data(BaseModel):
     message: str
 
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
-#LITERACY FUNCTIONS
+# LITERACY FUNCTIONS
+
 
 @app.post("/summerize")
 async def summerize(data: Data):
@@ -24,19 +26,11 @@ async def summerize(data: Data):
     print(data.message)
     summarizer = pipeline(
         "summarization", model="philschmid/bart-large-cnn-samsum")
-    
+
     return summarizer(data.message)
 
 
+# ASSISTIVE FUNCTIONS
 
 
-
-#ASSISTIVE FUNCTIONS
-
-
-
-
-
-
-#PERSONALIZED FUNCTIONS
-
+# PERSONALIZED FUNCTIONS
