@@ -152,6 +152,7 @@ export default function Form() {
                   name="housingExpenses"
                   type="number"
                   placeholder="$ Your monthly housing expenses"
+                  backgroundColor='#EDEDED'
                 />
               </FormControl>
 
@@ -161,6 +162,7 @@ export default function Form() {
                   name="healthExpenses"
                   type="number"
                   placeholder="$ Your monthly health expenses"
+                  backgroundColor='#EDEDED'
                 />
               </FormControl>
 
@@ -170,6 +172,7 @@ export default function Form() {
                   name="entertainmentExpenses"
                   type="number"
                   placeholder="$ Your monthly entertainment expenses"
+                  backgroundColor='#EDEDED'
                 />
               </FormControl>
 
@@ -179,6 +182,7 @@ export default function Form() {
                   name="savingsExpenses"
                   type="number"
                   placeholder="$ Your monthly savings"
+                  backgroundColor='#EDEDED'
                 />
               </FormControl>
 
@@ -188,10 +192,14 @@ export default function Form() {
                   name="miscellaneousExpenses"
                   type="number"
                   placeholder="$ Miscellaneous expenses"
+                  backgroundColor='#EDEDED'
                 />
               </FormControl>
 
-              <Button type="submit" bg="black" color="white" width="100%">
+              <Button type="submit" bg="black" color="white" width="100%" _hover={{
+                                bg: '#66D489',
+                                color: 'white',
+                            }}>
                 Submit
               </Button>
             </VStack>
