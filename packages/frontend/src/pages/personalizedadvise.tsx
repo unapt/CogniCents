@@ -1,30 +1,71 @@
-import { Card, CardBody, Divider, Heading, HStack, Stack, Image, Text, Textarea, CardFooter, ButtonGroup, Button, Center, VStack } from "@chakra-ui/react";
-import Link from "next/link";
-import styles from '../styles/inputpage.module.css'
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
-import { SideBar } from "../components/SideBar";
-import API from "../components/API";
-
-
-const PersonalizedAdvise = () => (
-    <>
+// import {
+//     Box,
+//     Divider,
+//     Heading,
+//     VStack,
+//     Button,
+//     useColorModeValue,
+//   } from "@chakra-ui/react";
+//   import Link from "next/link";
+//   import { SideBar } from "../components/SideBar";
+//   import API from "../components/API";
+  
+//   const PersonalizedAdvise = () => {
+//     const bg = useColorModeValue("gray.50", "gray.800");
+//     const color = useColorModeValue("gray.700", "gray.200");
+  
+//     return (
+//       <>
+//         <SideBar>
+//           <Box as="main" textAlign="center" py={10} bg={bg} color={color}>
+//             <Heading as="h1" size="2xl" mb={10}>
+//               Customize Your Personal Finances with AI
+//             </Heading>
+//             <Divider mb={5} />
+//             <VStack spacing={4} maxWidth="400px" margin="0 auto">
+//               <Heading as="h2" size="xl" mb={5}>
+//                 CogniVest
+//               </Heading>
+//               <API />
+//             </VStack>
+//           </Box>
+//         </SideBar>
+//       </>
+//     );
+//   };
+  
+//   export default PersonalizedAdvise;
+import {
+    Box,
+    Divider,
+    Heading,
+    VStack,
+    Button,
+    useColorModeValue,
+  } from "@chakra-ui/react";
+  import Link from "next/link";
+  import { SideBar } from "../components/SideBar";
+  import API from "../components/API";
+  
+  const PersonalizedAdvise = () => {
+    const bg = useColorModeValue("gray.50", "gray.800");
+    const color = useColorModeValue("gray.700", "gray.200");
+  
+    return (
+      <>
         <SideBar>
-            <Heading color="gray.500" margin={5}>
-                Customize Your Personal Finances with AI
+          <Box as="main" py={10} px={5} bg={bg} color={color}>
+            <Heading as="h1" size="2xl" mb={10}>
+              Customize Your Personal Finances with AI
             </Heading>
-            <Divider />
-            <br />
-            <div className="App">
-                {/* <Heading className="App-header" style={{ width: "100%" }}> */}
-                <h1 style={{ fontSize: 70, marginTop: "2rem" }}>
-                    <b>CogniVest</b>
-                </h1>
-                <API />
-                {/* </Heading> */}
-            </div>
-
+            <Divider mb={5} />
+            <VStack spacing={4} maxWidth="400px">
+              <API />
+            </VStack>
+          </Box>
         </SideBar>
-    </>
-);
-
-export default PersonalizedAdvise;
+      </>
+    );
+  };
+  
+  export default PersonalizedAdvise;

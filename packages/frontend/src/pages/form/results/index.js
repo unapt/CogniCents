@@ -5,7 +5,7 @@ import PieChart from '../../../components/PieChart';
 import classes from '../../../styles/piechart.module.css';
 import styles from '../../../styles/result.module.css'
 import Link from "next/link";
-
+import { SideBar } from "../../../components/SideBar";
 
 function piechart() {
   
@@ -49,6 +49,7 @@ function piechart() {
 
   console.log(standardData);
   return (
+    <SideBar>
     <div id={styles.resultbody}>
 
       <div id={styles.resulttitle}>This is what your budget looks like now. Let's save some cents!</div>
@@ -64,6 +65,7 @@ function piechart() {
           </Button>
       </Link >
     </div>
+    </SideBar>
   );
 }
 
