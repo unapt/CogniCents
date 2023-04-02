@@ -31,6 +31,11 @@ const theme = extendTheme({
   },
   colors: {
     black: '#16161D',
+    white: '#EDEDED',
+    cyon: '#8CF4FF',
+    bayse: '#75ABAC',
+    grey: '#3C464F',
+    green: '#B5FF00'
   },
   fonts,
   breakpoints,

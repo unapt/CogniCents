@@ -77,8 +77,11 @@ const Literacy = () => {
                     </TabList>
                     <TabPanels>
                         <TabPanel>
-                            <Textarea placeholder='Paste a jargon paragraph here...' onChange={event => setText(event.currentTarget.value)} />
-                            <Button isLoading={loading} margin={5} color="green.400" variant="outline" onClick={handleSubmit}>Submit</Button>
+                            <Textarea placeholder='Paste a jargon paragraph here...' backgroundColor='#EDEDED' onChange={event => setText(event.currentTarget.value)} />
+                            <Button isLoading={loading} margin={5} color="green.400" _hover={{
+                                bg: '#66D489',
+                                color: 'white',
+                            }} variant="outline" onClick={handleSubmit}>Submit</Button>
 
                             {answer ? <><Heading>Answer: </Heading>
                                 <Text>{answer}</Text></> : null}
@@ -99,6 +102,7 @@ const Literacy = () => {
                                         title="hell0"
                                         intro="sooogoood"
                                         link="hello" />
+
 
 
                                 ))

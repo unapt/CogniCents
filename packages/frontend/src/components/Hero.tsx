@@ -41,7 +41,7 @@ import { Flex, Heading } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 
 const titleGradient = css`
-  background-image: linear-gradient(to left, #38A169, black);
+  background-image: linear-gradient(to left, #75ABAC, #66D489);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,5 +56,5 @@ export const Hero = ({ title }: { title: string }) => (
 );
 
 Hero.defaultProps = {
-  title: "Cognicents",
+  title: "CogniCents",
 };

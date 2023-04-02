@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import theme from '../theme'
 import {
     IconButton,
     Box,
@@ -35,7 +36,6 @@ interface LinkItemProps {
 const LinkItems: Array<LinkItemProps> = [
     { name: 'Home', icon: FiHome, link: '/' },
     { name: 'Literacy', icon: FiBookOpen, link: '/literacy' },
-    { name: 'Assistive Automation', icon: FiTarget, link: '/assistive' },
     { name: 'Equity Research', icon: RiStockFill, link: '/personalizedadvise' },
     { name: 'Personalized Analysis', icon: FiLifeBuoy, link: '/form' },
 ];
@@ -85,7 +85,7 @@ const SideBarContent = ({ onClose, ...rest }: SideBarProps) => {
             {...rest}>
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
                 <Link href="/">
-                    <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
+                    <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color='#66D489'>
                         CogniCents
                     </Text>
                 </Link>
@@ -116,7 +116,7 @@ const NavItem = ({ link1, icon, children, ...rest }: NavItemProps) => {
                 role="group"
                 cursor="pointer"
                 _hover={{
-                    bg: 'cyan.400',
+                    bg: '#66D489',
                     color: 'white',
                 }}
                 {...rest}>

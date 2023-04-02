@@ -26,6 +26,10 @@ export function TenqCard({ title, intro, link }) {
                 direction={{ base: 'column', sm: 'row' }}
                 overflow='hidden'
                 variant='outline'
+                _hover={{
+                    bg: '#66D489',
+                    color: 'white',
+                }}
             >
                 <Image
                     objectFit='cover'
