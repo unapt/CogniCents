@@ -20,22 +20,23 @@ secapikey = os.getenv("SEC-API-KEY")
 extractorApi = ExtractorApi(secapikey)
 
 
-def tenq():
+def tenq(url_10q):
     # 10-Q example
     # url_10q = "https://www.sec.gov/Archives/edgar/data/1318605/000095017022006034/tsla-20220331.htm"
-    query = {
-        "query": {"query_string": {
-            "query": "filedAt:[2023-03-31 TO 2023-04-02] AND formType:\"10-Q\"",
-            "time_zone": "America/New_York"
-        }},
-        "from": "0",
-        "size": "10",
-        "sort": [{"filedAt": {"order": "desc"}}]
-    }
+    # query = {
+    #     "query": {"query_string": {
+    #         "query": "filedAt:[2023-03-31 TO 2023-04-02] AND formType:\"10-Q\"",
+    #         "time_zone": "America/New_York"
+    #     }},
+    #     "from": "0",
+    #     "size": "10",
+    #     "sort": [{"filedAt": {"order": "desc"}}]
+    # }
+    section_text = extractorApi.get_section(url_10q, "part2item1a", "text")
 
-    response = queryApi.get_filings(query)
+    # response = queryApi.get_filings(query)
 
-    return response
+    return section_text
 
 
 def summarizePart(partFiling):
@@ -57,16 +58,15 @@ def summarizePart(partFiling):
     return (str(completion['choices'][0]['message']['content']))
 
 
-txt = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileFive.txt').read_text()
+txt = 'https://www.sec.gov/Archives/edgar/data/1866633/000186663323000017/0001866633-23-000017-index.htm'
 txt1 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileFour.txt').read_text()
+    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileFour.txt')
 txt2 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileThree.txt').read_text()
+    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileThree.txt')
 txt3 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileTwo.txt').read_text()
+    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileTwo.txt')
 txt4 = Path(
-    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileOne.txt').read_text()
+    r'C:\Users\joe55\Desktop\HackPrinceton\packages\backend\dailyArticles\txtFileOne.txt')
 
 allFiles = [txt, txt1, txt2, txt3, txt4]
 
@@ -123,4 +123,4 @@ def determineCompany(context):
     return (question_answerer(question="What company is this paragraph refering to?", context=context))
 
 
-print(tenq())
+print(getAllSummarys(tenq(txt)))

@@ -26,10 +26,20 @@ import Row from "react-bootstrap/esm/Row";
 const Index = () => (
   <Container height="100vh" backgroundColor={theme.colors.white}>
     <Hero />
-    <Button as="a" href="/literacy" my={4}>
-      Explore Literacy
-    </Button>
+    <Button
+      size='md'
+      height='48px'
+      width='200px'
+      border='2px'
+      borderColor='green.500'
+      as="a" href="/literacy"
+      _hover={{
+        bg: '#66D489',
+        color: 'white',
+      }}>
 
+  >    Exploor Freedom
+    </Button>
     <Image src={result} alt="coinstack art" width="600" height="800" />
 
 
