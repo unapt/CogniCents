@@ -1,15 +1,16 @@
 # CogniCents 
 ### Making finance digestible for retail...
+<div align="center">
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="200" width="300" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/7330600a-66d0-4bc2-8709-650b7a51d2ee" height="200" width="350" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/c75db1df-f217-4ed2-b7c3-fe48eb8d2d3b" height="200" width="350" />
+</div>
 
-<p float="left">
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/abfc76bf-3d6a-48af-8f26-b028650739ad" width="200" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/78ada4dd-c584-4c9b-ac02-f31bde149d42" width="200" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/5628380e-a9a6-4f2a-9e7d-8014da1c0095" width="200" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/fd5c794c-6ade-4722-9458-268788958710" width="200" />
-</p>
-
-
-CogniCents is a multifaceted financial web service designed to provide the customer with enhanced financial literacy and expertise
+<div align="center">
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/89efd6fc-76aa-4cd8-b734-019f7f425339" height="200" width="350" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/50a0f310-49c9-4064-8b48-fb026e3d4d66" height="200" width="300" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/1055a643-980d-4848-9c5b-9c28acd39da1" height="200" width="350" />
+</div>
 
 #### 10-Q Report Processor: 
 - Consumes user-inputted 10-Q reports and uses deep learning LLMs to perform summative analysis.
@@ -18,7 +19,7 @@ CogniCents is a multifaceted financial web service designed to provide the custo
 #### Equity Research Analyzer:
 - Generates real-time graphical data visualizations of stock pricings for user-inputted stock tickers.
 - Real-time finance articles from Fidelity API to keep users up-to-date with potential investment opportunities.
-- Sentiment analysis of journal content to give user overal feel of market trends.
+- AI Sentiment analysis of journal content to give user overal feel of market trends.
 
 #### Personalized Budgeting:
 - Interactive user entry feature to enable users to keep track of their budgeting plans.
@@ -27,10 +28,10 @@ CogniCents is a multifaceted financial web service designed to provide the custo
 
 #### Decentralized Finances:
 - Proof-of-concept info page providing users with details on Crypto investing
-- Backend integration of Verbwire API (https://www.verbwire.com/)
+- Backend integration of Verbwire API smart contracts (https://www.verbwire.com/)
 
 #### Extra Financial Resources:
-- Additionaly financial resourses, information, and references to assist user in enancing their financial literacy.
+- Additional financial resourses, information, and references to assist user in enancing their financial literacy.
 
 # Set up
 
