@@ -1,7 +1,7 @@
 # CogniCents 
 ### Making finance digestible for retail...
 
-A multifaceted AI-driven financial solution created to equip everyday users with financial proficiency and market expertise.
+A multifaceted AI-driven solution created to equip everyday users with financial proficiency and market expertise.
 
 ## Product Features
 
