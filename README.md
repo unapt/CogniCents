@@ -13,7 +13,7 @@
   <img src="https://github.com/unapt/CogniCents/assets/64095665/89efd6fc-76aa-4cd8-b734-019f7f425339" width="200" />
 </div>
 
-
+<img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="200" width="800" />
 
 <div align="left">
   <img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="200" width="250" />
