@@ -1,6 +1,9 @@
 # CogniCents 
 ### Making finance digestible for retail...
 
+
+## Product Features
+
 <div align="left">
   <img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="180" width="240" />
   <img src="https://github.com/unapt/CogniCents/assets/64095665/7330600a-66d0-4bc2-8709-650b7a51d2ee" height="180" width="290" />
