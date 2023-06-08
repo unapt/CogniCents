@@ -1,30 +1,16 @@
 # CogniCents 
 ### Making finance digestible for retail...
-<div align="center">
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" width="200" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/7330600a-66d0-4bc2-8709-650b7a51d2ee" width="200" />
-</div>
-<div align="center">
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/c75db1df-f217-4ed2-b7c3-fe48eb8d2d3b" width="200" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/50a0f310-49c9-4064-8b48-fb026e3d4d66" width="200" />
-</div>
-<div align="center">
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/1055a643-980d-4848-9c5b-9c28acd39da1" width="200" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/89efd6fc-76aa-4cd8-b734-019f7f425339" width="200" />
-</div>
-
-<img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="200" width="850" />
 
 <div align="left">
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="200" width="240" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/7330600a-66d0-4bc2-8709-650b7a51d2ee" height="200" width="290" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/c75db1df-f217-4ed2-b7c3-fe48eb8d2d3b" height="200" width="290" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/13d6dd71-dc38-4aa5-abac-4fd715a33158" height="180" width="240" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/7330600a-66d0-4bc2-8709-650b7a51d2ee" height="180" width="290" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/c75db1df-f217-4ed2-b7c3-fe48eb8d2d3b" height="180" width="290" />
 </div>
 
 <div align="left">
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/89efd6fc-76aa-4cd8-b734-019f7f425339" height="200" width="290" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/50a0f310-49c9-4064-8b48-fb026e3d4d66" height="200" width="240" />
-  <img src="https://github.com/unapt/CogniCents/assets/64095665/1055a643-980d-4848-9c5b-9c28acd39da1" height="200" width="290" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/89efd6fc-76aa-4cd8-b734-019f7f425339" height="180" width="290" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/50a0f310-49c9-4064-8b48-fb026e3d4d66" height="180" width="240" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/1055a643-980d-4848-9c5b-9c28acd39da1" height="180" width="290" />
 </div>
 
 #### 10-Q Report Processor: 
