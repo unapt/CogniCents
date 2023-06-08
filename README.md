@@ -1,10 +1,13 @@
 # CogniCents 
 ### Making finance digestible for retail...
 
-![image](https://github.com/unapt/CogniCents/assets/64095665/abfc76bf-3d6a-48af-8f26-b028650739ad)
-![image](https://github.com/unapt/CogniCents/assets/64095665/78ada4dd-c584-4c9b-ac02-f31bde149d42)
-![image](https://github.com/unapt/CogniCents/assets/64095665/5628380e-a9a6-4f2a-9e7d-8014da1c0095)
-![image](https://github.com/unapt/CogniCents/assets/64095665/fd5c794c-6ade-4722-9458-268788958710)
+<p float="left">
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/abfc76bf-3d6a-48af-8f26-b028650739ad" width="200" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/78ada4dd-c584-4c9b-ac02-f31bde149d42" width="200" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/5628380e-a9a6-4f2a-9e7d-8014da1c0095" width="200" />
+  <img src="https://github.com/unapt/CogniCents/assets/64095665/fd5c794c-6ade-4722-9458-268788958710" width="200" />
+</p>
+
 
 CogniCents is a multifaceted financial web service designed to provide the customer with enhanced financial literacy and expertise
 
